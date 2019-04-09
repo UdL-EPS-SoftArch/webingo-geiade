@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  API: 'https://webingo-gei-api.herokuapp.com'
+  API: 'https://webingo-geiade-api.herokuapp.com'
 };

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webingo-gei": {
+    "webingo-geiade": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/webingo-gei",
+            "outputPath": "dist/webingo-geiade",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -60,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "webingo-gei:build"
+            "browserTarget": "webingo-geiade:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "webingo-gei:build:production"
+              "browserTarget": "webingo-geiade:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "webingo-gei:build"
+            "browserTarget": "webingo-geiade:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "webingo-gei-e2e": {
+    "webingo-geiade-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "webingo-gei:serve"
+            "devServerTarget": "webingo-geiade:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "webingo-gei:serve:production"
+              "devServerTarget": "webingo-geiade:serve:production"
             }
           }
         },
@@ -136,7 +136,7 @@
       }
     }
   },
-  "defaultProject": "webingo-gei",
+  "defaultProject": "webingo-geiade",
   "schematics": {
     "@schematics/angular:class": {
       "spec": false
