@@ -12,6 +12,7 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { PlayerCreateComponent } from './user/user-create/player-create.component';
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
+import {CardComponent} from './card/card.component';
 
 const routes: Routes = [
   { path: 'players/new', component: PlayerCreateComponent, canActivate: [AdministratorGuard] },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
+  { path: 'card', component: CardComponent },
 ];
 
 @NgModule({
