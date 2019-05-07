@@ -31,7 +31,7 @@ import { AdminCreateComponent } from './user/user-create/admin-create.component'
 import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
-import { CardComponent } from './card/card.component';
+import { CardListComponent } from './card/card-list/card-list.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { CardComponent } from './card/card.component';
     PlayerEditComponent,
     AdminEditComponent,
     UserSearchComponent,
-    CardComponent,
+    CardListComponent,
   ],
   imports: [
     BrowserModule,
