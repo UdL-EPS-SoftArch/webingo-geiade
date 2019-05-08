@@ -12,6 +12,7 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { PlayerCreateComponent } from './user/user-create/player-create.component';
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
+import {GameListComponent} from "./game/game-list/game-list.component";
 
 const routes: Routes = [
   { path: 'players/new', component: PlayerCreateComponent, canActivate: [AdministratorGuard] },
@@ -23,9 +24,12 @@ const routes: Routes = [
   { path: 'admins/:id/delete', component: AdminDeleteComponent, canActivate: [AdministratorGuard] },
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
+  { path: 'games', component: GameListComponent, canActivate: [AdministratorGuard] },
+  // { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

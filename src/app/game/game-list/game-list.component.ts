@@ -1,5 +1,6 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import {Game} from "../game";
 //import { PlayerService } from '../player.service';
 //import { AdminService } from '../admin.service';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './game-list.component.html'
 })
 export class GameListComponent implements OnInit {
-  public games: any [];
+  public games: Game [];
   public totalGames = 0;
 
   constructor(
