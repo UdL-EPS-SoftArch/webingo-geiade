@@ -1,15 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {CardService} from '../card-service';
+import { Card } from '../card';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-card-create',
   templateUrl: './card-create.component.html',
   styleUrls: ['./card-create.component.css']
 })
 export class CardCreateComponent implements OnInit {
 
-  constructor() { }
+  public card: Card;
 
-  ngOnInit() {
+  constructor(private router: Router,
+              private cardService: CardService) {
   }
 
+  ngOnInit() {
+    this.card = new Card();
+  }
+
+  onSubmit(): void {
+    this.cardService.create(this.card).subscribe(
+      (card: Card) => this.router.navigate([card.uri]));
+
+  }
 }

@@ -7,4 +7,10 @@ export class Card extends Resource {
   // CANVIAR GAME I PLAYER ALS SEUS CORRESPONENTS OBJECTES
   game: number;
   player: number;
+  uri: string;
+
+  constructor(values: object = {}) {
+    super();
+    Object.assign(this as any, values);
+  }
 }
