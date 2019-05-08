@@ -13,6 +13,9 @@ import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { PlayerCreateComponent } from './user/user-create/player-create.component';
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
 import { InvitationListComponent } from './invitation/invitation-list/invitation-list.component';
+import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
+import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
+import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
 
 
 const routes: Routes = [
@@ -26,6 +29,9 @@ const routes: Routes = [
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
   { path: 'invitations', component: InvitationListComponent, canActivate: [AdministratorGuard] },
+  { path: 'invitations/new', component: InvitationCreateComponent, canActivate: [AdministratorGuard] },
+  { path: 'invitations/:id/delete', component: InvitationDeleteComponent, canActivate: [LoggedInGuard] },
+  { path: 'invitations/:id', component: InvitationDetailComponent, canActivate: [LoggedInGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
 ];

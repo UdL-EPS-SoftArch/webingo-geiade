@@ -32,6 +32,9 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import { InvitationListComponent } from './invitation/invitation-list/invitation-list.component';
+import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
+import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
+import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { InvitationListComponent } from './invitation/invitation-list/invitation
     AdminEditComponent,
     UserSearchComponent,
     InvitationListComponent,
+    InvitationCreateComponent,
+    InvitationDeleteComponent,
+    InvitationDetailComponent,
   ],
   imports: [
     BrowserModule,
