@@ -4,13 +4,13 @@ import { RestService } from 'angular4-hal-aot';
 import { Invitation } from './invitation';
 
 @Injectable()
-export class InvitationService extends RestService<Player> {
+export class InvitationService extends RestService<Invitation> {
 
   constructor(injector: Injector) {
-    super(Player, 'players', injector);
+    super(Invitation, 'invitations', injector);
   }
 
-  public findByUsernameContaining(text: string): Observable<Player[]> {
+  public findByUsernameContaining(text: string): Observable<Invitation[]> {
     const options: any = {params: [{key: 'text', value: text}]};
     return this.search('findByUsernameContaining', options);
   }
