@@ -1,15 +1,33 @@
 <form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
+    <!--&lt;!&ndash; Player input &ndash;&gt;-->
+    <!--<div class="form-group" [class.was-validated]="player.dirty || player.touched">-->
+      <!--<label class="control-label" for="player">Player*</label>-->
+      <!--<input id="player" name="player" type="text" class="form-control" required-->
+             <!--[(ngModel)]="card.player" #player="ngModel">-->
+      <!--<div class="invalid-feedback">A player is required</div>-->
+    <!--</div>-->
 
+    <!--&lt;!&ndash; Username input &ndash;&gt;-->
+    <!--<div class="form-group" [class.was-validated]="player.dirty || player.touched">-->
+      <!--<label class="control-label" for="player">Player*</label>-->
+      <!--<input id="player" name="player" type="text" class="form-control" required-->
+             <!--[(ngModel)]="card.player" #player="ngModel">-->
+      <!--<div class="invalid-feedback">A player is required</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; Username input &ndash;&gt;-->
+    <!--<div class="form-group" [class.was-validated]="player.dirty || player.touched">-->
+      <!--<label class="control-label" for="player">Player*</label>-->
+      <!--<input id="player" name="player" type="text" class="form-control" required-->
+             <!--[(ngModel)]="card.player" #player="ngModel">-->
+      <!--<div class="invalid-feedback">A player is required</div>-->
+    <!--</div>-->
 
     <!-- Button -->
     <div class="form-group">
       <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
-      <button id="listBtn" type="button" [routerLink]="['/users']" class="btn m-1 btn-outline-primary pull-right">Back</button>
+      <button id="listBtn" type="button" [routerLink]="['/cards']" class="btn m-1 btn-outline-primary pull-right">Back</button>
     </div>
   </fieldset>
 </form>
-
-<p>
-  card works!
-</p>
