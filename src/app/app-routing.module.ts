@@ -14,6 +14,7 @@ import { PlayerCreateComponent } from './user/user-create/player-create.componen
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
 import {CardListComponent} from './card/card-list/card-list.component';
 import {CardCreateComponent} from './card/card-create/card-create.component';
+import {CardDetailComponent} from './card/card-detail/card-detail.component';
 
 const routes: Routes = [
   { path: 'players/new', component: PlayerCreateComponent, canActivate: [AdministratorGuard] },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'cards', component: CardListComponent, canActivate: [AdministratorGuard]},
   { path: 'cards/new', component: CardCreateComponent, canActivate: [AdministratorGuard] },
+  { path: 'cards/:id', component: CardDetailComponent, canActivate: [LoggedInGuard] },
 ];
 
 @NgModule({
