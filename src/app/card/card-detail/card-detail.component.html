@@ -1,0 +1,13 @@
+<div class="row justify-content-between">
+  <div class="col mb-3">
+    <app-user-search (emitResults)="showSearchResults($event)" [users]="users"></app-user-search>
+  </div>
+  <div class="col mb-3">
+    <button id="newUserBtn" class="btn btn-success pull-right" type="button"
+            [routerLink]="['/cards/new']">Create Card</button>
+  </div>
+</div>
+
+<p>
+  card works!
+</p>
