@@ -33,6 +33,7 @@ import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 import {GameListComponent} from "./game/game-list/game-list.component";
 import {GameSearchComponent} from "./game/game-search/game-search.component";
+import {GameCreateComponent} from "./game/game-create/game-create.component";
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import {GameSearchComponent} from "./game/game-search/game-search.component";
     UserSearchComponent,
     GameListComponent,
     GameSearchComponent,
+    GameCreateComponent,
   ],
   imports: [
     BrowserModule,
