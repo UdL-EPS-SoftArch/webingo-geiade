@@ -35,7 +35,6 @@ import { InvitationListComponent } from './invitation/invitation-list/invitation
 import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
 import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
 import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
-import { InvitationComponent } from './invitation/invitation.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { InvitationComponent } from './invitation/invitation.component';
     InvitationCreateComponent,
     InvitationDeleteComponent,
     InvitationDetailComponent,
-    InvitationComponent,
   ],
   imports: [
     BrowserModule,
