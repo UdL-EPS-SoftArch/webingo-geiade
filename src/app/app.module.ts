@@ -34,6 +34,8 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
 import {GameListComponent} from "./game/game-list/game-list.component";
 import {GameSearchComponent} from "./game/game-search/game-search.component";
 import {GameCreateComponent} from "./game/game-create/game-create.component";
+import {GameService} from "./game/game.service";
+import {GameEditComponent} from "./game/game-edit/game-edit.component";
 
 @NgModule({
   declarations: [
@@ -53,6 +55,7 @@ import {GameCreateComponent} from "./game/game-create/game-create.component";
     GameListComponent,
     GameSearchComponent,
     GameCreateComponent,
+    GameEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,7 @@ import {GameCreateComponent} from "./game/game-create/game-create.component";
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
 
-    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService
+    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,5 @@
 import { Resource } from 'angular4-hal-aot';
-import {User} from "../login-basic/user";
+import {Player} from "../user/player";
 
 export class Game extends Resource {
   id: bigint;
@@ -10,8 +10,8 @@ export class Game extends Resource {
   nums: number[];
   linePrize: number;
   bingoPrize: number;
-  lineWinner: User;
-  bingoWinner: User;
+  lineWinner: Player;
+  bingoWinner: Player;
   price: number;
 
 
