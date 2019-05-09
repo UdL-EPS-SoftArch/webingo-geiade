@@ -8,23 +8,4 @@
   </div>
 </div>
 
-<div class="card mb-1" *ngFor="let invitation of invitations">
-  <div class="card-block row m-1">
-    <h4 class="card-title col-md-12 p-1"><a [routerLink]="[invitation.uri]">{{invitation.message}}</a></h4>
-    <div class="col-md-4 p-1">
-      <h6 class="card-subtitle text-muted"><i class="fa fa-ghost fa-sm prefix grey-text"></i>Username</h6>
-      <p class="card-text">{{invitation.id}}</p>
-    </div>
-    <div class="col-md-4 p-3">
-      <h6 class="card-subtitle text-muted">Role</h6>
-      <p class="card-text">{{invitation.authorities[0]?.authority.split('_')[1]}}</p>
-    </div>
-    <div class="col-md-4 p-1">
-      <button type="button" class="btn m-1 btn-outline-primary pull-right" [routerLink]="[invitation.uri]">Details</button>
-    </div>
-  </div>
-</div>
 
-<p i18n class="text-center">Showing {{invitations.length}} out of { totalInvitations, plural,
-  =1 {1 invitations}
-  other { {{totalInvitations}} users} }</p>
