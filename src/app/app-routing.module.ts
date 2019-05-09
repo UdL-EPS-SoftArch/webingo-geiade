@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'cards', component: CardListComponent, canActivate: [AdministratorGuard]},
-  { path: 'cards/new', component: CardCreateComponent },
+  { path: 'cards/new', component: CardCreateComponent, canActivate: [AdministratorGuard] },
 ];
 
 @NgModule({
