@@ -10,8 +10,5 @@ export class InvitationService extends RestService<Invitation> {
     super(Invitation, 'invitations', injector);
   }
 
-  public findByUsernameContaining(text: string): Observable<Invitation[]> {
-    const options: any = {params: [{key: 'text', value: text}]};
-    return this.search('findByUsernameContaining', options);
-  }
+
 }
