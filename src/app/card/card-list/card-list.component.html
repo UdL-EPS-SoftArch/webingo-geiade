@@ -10,13 +10,13 @@
 
 <div class="card mb-1" *ngFor="let card of cards">
   <div class="card-block row m-1">
-    <h4 class="card-title col-md-12 p-1"><a [routerLink]="[card.uri]">{{card.player}}</a></h4>
+    <h4 class="card-title col-md-12 p-1"><a [routerLink]="[card.id]">{{card.id}}</a></h4>
     <div class="col-md-4 p-1">
-      <h6 class="card-subtitle text-muted"><i class="fa fa-ghost fa-sm prefix grey-text"></i>Username</h6>
-      <p class="card-text">{{card.id}}</p>
+      <h6 class="card-subtitle text-muted"><i class="fa fa-ghost fa-sm prefix grey-text"></i>Id</h6>
+      <p class="card-text">{{card.numbers}}</p>
     </div>
     <div class="col-md-4 p-1">
-      <button type="button" class="btn m-1 btn-outline-primary pull-right" [routerLink]="[card.uri]">Details</button>
+      <button type="button" class="btn m-1 btn-outline-primary pull-right" [routerLink]="[card.id]">Details</button>
     </div>
   </div>
 </div>

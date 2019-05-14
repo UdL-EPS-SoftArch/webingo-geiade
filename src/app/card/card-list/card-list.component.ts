@@ -21,13 +21,10 @@ export class CardListComponent implements OnInit {
   }
 
   ngOnInit() {
-    forkJoin(
-      this.cardService.getAll())
+      this.cardService.getAll()
       .subscribe(
-        ([card1, card2]) => {
-          this.cards = this.cards.concat(this.cards).sort(
-            (a: Card, b: Card) => a.id.localeCompare(b.id)
-          );
+        cards => {
+          this.cards = cards;
           this.totalCards = this.cards.length;
         });
   }
