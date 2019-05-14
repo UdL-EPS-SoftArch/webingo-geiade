@@ -35,6 +35,7 @@ import { InvitationListComponent } from './invitation/invitation-list/invitation
 import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
 import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
 import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
+import {InvitationService} from "./invitation/invitation.service";
 
 @NgModule({
   declarations: [
@@ -72,7 +73,7 @@ import { InvitationDetailComponent } from './invitation/invitation-detail/invita
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
 
-    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService
+    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, InvitationService
   ],
   bootstrap: [AppComponent]
 })
