@@ -1,12 +1,12 @@
 <form id="user-form" (ngSubmit)="onSubmit()" #form="ngForm">
   <fieldset>
-    <!--&lt;!&ndash; Player input &ndash;&gt;-->
-    <!--<div class="form-group" [class.was-validated]="player.dirty || player.touched">-->
-      <!--<label class="control-label" for="player">Player*</label>-->
-      <!--<input id="player" name="player" type="text" class="form-control" required-->
-             <!--[(ngModel)]="card.player" #player="ngModel">-->
-      <!--<div class="invalid-feedback">A player is required</div>-->
-    <!--</div>-->
+    <!-- Player input -->
+    <div class="form-group" [class.was-validated]="player.dirty || player.touched">
+      <label class="control-label" for="player">Player*</label>
+      <input id="player" name="player" type="text" class="form-control" required
+             [(ngModel)]="card.player" #player="ngModel">
+      <div class="invalid-feedback">A player is required</div>
+    </div>
 
     <!--&lt;!&ndash; Username input &ndash;&gt;-->
     <!--<div class="form-group" [class.was-validated]="player.dirty || player.touched">-->

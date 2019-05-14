@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {CardService} from '../card-service';
 import {Card} from '../card';
-import {forkJoin} from 'rxjs';
 
 
 @Component({

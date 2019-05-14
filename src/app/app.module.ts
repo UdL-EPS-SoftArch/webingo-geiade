@@ -35,6 +35,7 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
 import { CardListComponent } from './card/card-list/card-list.component';
 import { CardCreateComponent } from './card/card-create/card-create.component';
 import { CardDetailComponent} from './card/card-detail/card-detail.component';
+import {CardSearchComponent} from './card/card-search/card-search.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { CardDetailComponent} from './card/card-detail/card-detail.component';
     CardListComponent,
     CardCreateComponent,
     CardDetailComponent,
+    CardSearchComponent,
   ],
   imports: [
     BrowserModule,

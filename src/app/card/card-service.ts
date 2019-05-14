@@ -10,4 +10,9 @@ export class CardService extends RestService<Card> {
   constructor(injector: Injector) {
     super(Card, 'cards', injector);
   }
+
+  public findByPlayerContaining(text: string): Observable<Card[]> {
+    const options: any = {params: [{key: 'text', value: text}]};
+    return this.search('findByPlayerContaining', options);
+  }
 }
