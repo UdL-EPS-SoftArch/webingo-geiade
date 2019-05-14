@@ -1,15 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {InvitationService} from "../invitation.service";
+import { Invitation} from "../invitation";
 
 @Component({
-  selector: 'app-invitationcreate',
+  selector: 'app-invitation-create',
   templateUrl: './invitation-create.component.html',
-  styleUrls: ['./invitation.create.component.css']
+  styleUrls: ['./invitation-create.component.css']
 })
 export class InvitationCreateComponent implements OnInit {
 
-  constructor() { }
+  public invitation: Invitation;
 
-  ngOnInit() {
+  constructor(private router: Router,
+              private invitationService: InvitationService) {
   }
 
+  ngOnInit() {
+    this.invitation = new Invitation();
+  }
+
+  onSubmit(): void {
+    this.invitationService.create(this.invitation).subscribe(
+      (invitation: Invitation) => this.router.navigate([invitation.uri]));
+
+  }
 }
