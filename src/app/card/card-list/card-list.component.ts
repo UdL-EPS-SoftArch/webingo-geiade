@@ -25,7 +25,9 @@ export class CardListComponent implements OnInit {
       this.cardService.getAll())
       .subscribe(
         ([card1, card2]) => {
-          this.cards = this.cards;
+          this.cards = this.cards.concat(this.cards).sort(
+            (a: Card, b: Card) => a.id.localeCompare(b.id)
+          );
           this.totalCards = this.cards.length;
         });
   }
