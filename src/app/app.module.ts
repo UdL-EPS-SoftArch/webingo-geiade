@@ -42,6 +42,8 @@ import { CardCreateComponent } from './card/card-create/card-create.component';
 import { CardDetailComponent} from './card/card-detail/card-detail.component';
 import {CardSearchComponent} from './card/card-search/card-search.component';
 import {GameJoinComponent} from './game/game-join/game-join.component';
+import {GameDetailComponent} from './game/game-detail/game-detail.component';
+import {GameDeleteComponent} from './game/game-delete/game-detele.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +69,8 @@ import {GameJoinComponent} from './game/game-join/game-join.component';
     CardDetailComponent,
     CardSearchComponent,
     GameJoinComponent,
+    GameDetailComponent,
+    GameDeleteComponent,
     ],
   imports: [
     BrowserModule,

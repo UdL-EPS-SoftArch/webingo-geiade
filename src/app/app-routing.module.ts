@@ -17,6 +17,9 @@ import {GameCreateComponent} from './game/game-create/game-create.component';
 import {CardListComponent} from './card/card-list/card-list.component';
 import {CardCreateComponent} from './card/card-create/card-create.component';
 import {CardDetailComponent} from './card/card-detail/card-detail.component';
+import {GameDetailComponent} from './game/game-detail/game-detail.component';
+import {GameEditComponent} from './game/game-edit/game-edit.component';
+import {GameDeleteComponent} from './game/game-delete/game-detele.component';
 
 const routes: Routes = [
   { path: 'players/new', component: PlayerCreateComponent, canActivate: [AdministratorGuard] },
@@ -30,6 +33,9 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
   { path: 'games', component: GameListComponent },
   { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id', component: GameDetailComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id/edit', component: GameEditComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id/delete', component: GameDeleteComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'cards', component: CardListComponent },

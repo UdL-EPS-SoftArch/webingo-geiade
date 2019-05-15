@@ -2,7 +2,7 @@ import { Resource } from 'angular4-hal-aot';
 import {Player} from "../user/player";
 
 export class Game extends Resource {
-  id: bigint;
+  id: number;
   uri: string;
   name = '';
   isFinished: boolean;
