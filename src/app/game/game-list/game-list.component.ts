@@ -1,8 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import {Game} from "../game";
-import {forkJoin} from "rxjs";
-import {GameService} from "../game.service";
+import {Game} from '../game';
+import {GameService} from '../game.service';
 
 @Component({
   selector: 'app-game-list',
@@ -18,9 +17,12 @@ export class GameListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    /*forkJoin(
-      this.gameService.getAll()
-    )*/
+    this.gameService.getAll()
+      .subscribe(
+        games => {
+          this.games = games;
+          this.totalGames = this.games.length;
+        });
   }
 
   showSearchResults(games) {
