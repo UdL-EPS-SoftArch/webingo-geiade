@@ -4,6 +4,7 @@ import {Game} from "../game";
 import {forkJoin} from "rxjs";
 import {GameService} from "../game.service";
 
+
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html'
@@ -18,9 +19,11 @@ export class GameListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    /*forkJoin(
-      this.gameService.getAll()
-    )*/
+    this.gameService.getAll().subscribe(
+        games => {
+          this.games=games;
+          this.totalGames = this.games.length;
+        });
   }
 
   showSearchResults(games) {

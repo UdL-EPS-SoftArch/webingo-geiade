@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
   { path: 'games', component: GameListComponent, canActivate: [AdministratorGuard] },
   { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
+  //{ path: 'games/:id', component: GameDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
 ];
