@@ -21,7 +21,7 @@ export class GameListComponent implements OnInit {
   ngOnInit() {
     this.gameService.getAll().subscribe(
         games => {
-          this.games=games;
+          this.games = games;
           this.totalGames = this.games.length;
         });
   }

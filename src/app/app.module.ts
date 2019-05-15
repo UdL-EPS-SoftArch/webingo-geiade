@@ -36,6 +36,7 @@ import {GameSearchComponent} from "./game/game-search/game-search.component";
 import {GameCreateComponent} from "./game/game-create/game-create.component";
 import {GameService} from "./game/game.service";
 import {GameEditComponent} from "./game/game-edit/game-edit.component";
+import {GameDetailComponent} from "./game/game-detail/game-detail.component";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {GameEditComponent} from "./game/game-edit/game-edit.component";
     GameSearchComponent,
     GameCreateComponent,
     GameEditComponent,
+    GameDetailComponent,
   ],
   imports: [
     BrowserModule,
