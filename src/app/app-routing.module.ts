@@ -28,11 +28,11 @@ const routes: Routes = [
   { path: 'admins/:id/delete', component: AdminDeleteComponent, canActivate: [AdministratorGuard] },
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
-  { path: 'games', component: GameListComponent, canActivate: [AdministratorGuard] },
+  { path: 'games', component: GameListComponent },
   { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
-  { path: 'cards', component: CardListComponent, canActivate: [AdministratorGuard]},
+  { path: 'cards', component: CardListComponent },
   { path: 'cards/new', component: CardCreateComponent, canActivate: [AdministratorGuard] },
   { path: 'cards/:id', component: CardDetailComponent, canActivate: [LoggedInGuard] },
 ];

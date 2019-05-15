@@ -1,4 +1,7 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthenticationBasicService} from '../login-basic/authentication-basic.service';
+import {User} from '../login-basic/user';
+import {Authority} from '../login-basic/authority';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +10,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   public isCollapsed: boolean;
+  public user: string;
 
-  constructor() {
+  constructor(private authenticationService: AuthenticationBasicService) {
   }
 
   ngOnInit() {
     this.isCollapsed = true;
+    this.user = this.authenticationService.getCurrentUser().authorities[0].authority;
+    // this.user = this.authenticationService.getCurrentUser().authorization;
   }
 }
