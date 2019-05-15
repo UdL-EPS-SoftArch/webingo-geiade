@@ -17,6 +17,7 @@ import { AuthInterceptor } from './login-basic/auth-interceptor';
 import { AuthenticationBasicService } from './login-basic/authentication-basic.service';
 import { PlayerService } from './user/player.service';
 import { AdminService } from './user/admin.service';
+import { CardService } from './card/card-service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -31,11 +32,15 @@ import { AdminCreateComponent } from './user/user-create/admin-create.component'
 import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
-import {GameListComponent} from "./game/game-list/game-list.component";
-import {GameSearchComponent} from "./game/game-search/game-search.component";
-import {GameCreateComponent} from "./game/game-create/game-create.component";
-import {GameService} from "./game/game.service";
-import {GameEditComponent} from "./game/game-edit/game-edit.component";
+import {GameListComponent} from './game/game-list/game-list.component';
+import {GameSearchComponent} from './game/game-search/game-search.component';
+import {GameCreateComponent} from './game/game-create/game-create.component';
+import {GameService} from './game/game.service';
+import {GameEditComponent} from './game/game-edit/game-edit.component';
+import { CardListComponent } from './card/card-list/card-list.component';
+import { CardCreateComponent } from './card/card-create/card-create.component';
+import { CardDetailComponent} from './card/card-detail/card-detail.component';
+import {CardSearchComponent} from './card/card-search/card-search.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +61,11 @@ import {GameEditComponent} from "./game/game-edit/game-edit.component";
     GameSearchComponent,
     GameCreateComponent,
     GameEditComponent,
-  ],
+    CardListComponent,
+    CardCreateComponent,
+    CardDetailComponent,
+    CardSearchComponent,
+    ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -72,8 +81,8 @@ import {GameEditComponent} from "./game/game-edit/game-edit.component";
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-
-    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService
+    // { provide: ''},
+    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService, CardService
   ],
   bootstrap: [AppComponent]
 })
