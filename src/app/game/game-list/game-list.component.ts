@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {Game} from '../game';
 import {GameService} from '../game.service';
 
+
 @Component({
   selector: 'app-game-list',
   templateUrl: './game-list.component.html'

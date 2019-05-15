@@ -1,6 +1,6 @@
 <div class="row justify-content-between">
   <div class="col mb-3">
-    <app-user-search (emitResults)="showSearchResults($event)" [users]="games"></app-user-search>
+    <app-game-search (emitResults)="showSearchResults($event)" [games]="games"></app-game-search>
   </div>
   <div class="col mb-3">
     <button id="newUserBtn" class="btn btn-success pull-right" type="button"
@@ -26,5 +26,5 @@
 </div>
 
 <p i18n class="text-center">Showing {{games.length}} out of { totalGames, plural,
-  =1 {1 admin}
+  =1 {1 game}
   other { {{totalGames}} games} }</p>
