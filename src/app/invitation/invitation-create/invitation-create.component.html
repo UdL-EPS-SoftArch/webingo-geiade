@@ -4,7 +4,7 @@
     <div class="form-group" [class.was-validated]="player.dirty || player.touched">
       <label class="control-label" for="player">Player*</label>
       <input id="player" name="player" type="text" class="form-control" required
-             [(ngModel)]="invitation.player" #player="ngModel">
+             [(ngModel)]="invitation.playerInvited" #player="ngModel">
       <div class="invalid-feedback">A player is required</div>
     </div>
 

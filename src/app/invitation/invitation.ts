@@ -10,7 +10,7 @@ export class Invitation extends Resource {
   message: string;
   playerInvited: Player;
   playerWhoInvited: Player;
-  uri: string;
+  //uri: string;
 
 
   constructor(values: object = {}) {

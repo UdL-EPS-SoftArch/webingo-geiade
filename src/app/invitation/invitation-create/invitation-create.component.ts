@@ -22,7 +22,7 @@ export class InvitationCreateComponent implements OnInit {
 
   onSubmit(): void {
     this.invitationService.create(this.invitation).subscribe(
-      (invitation: Invitation) => this.router.navigate([invitation.uri]));
+      (invitation: Invitation) => this.router.navigate([invitation.id]));
 
   }
 }
