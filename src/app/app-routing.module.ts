@@ -4,6 +4,7 @@ import { LoggedInGuard } from './login-basic/loggedin.guard';
 import { AdministratorGuard } from './login-basic/administrator.guard';
 import { AboutComponent } from './about/about.component';
 import { UserListComponent } from './user/user-list/user-list.component';
+import { PlayerListComponent } from './user/user-list/player-list.component';
 import { PlayerDetailComponent } from './user/user-detail/player-detail.component';
 import { AdminDetailComponent } from './user/user-detail/admin-detail.component';
 import { PlayerDeleteComponent } from './user/user-delete/player-delete.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'admins/:id/edit', component: AdminEditComponent, canActivate: [AdministratorGuard] },
   { path: 'admins/:id/delete', component: AdminDeleteComponent, canActivate: [AdministratorGuard] },
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
+  { path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
   { path: 'games', component: GameListComponent },
   { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
