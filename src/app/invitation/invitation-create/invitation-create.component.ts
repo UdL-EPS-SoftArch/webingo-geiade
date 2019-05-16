@@ -5,8 +5,7 @@ import {Invitation} from "../invitation";
 
 @Component({
   selector: 'app-invitation-create',
-  templateUrl: './invitation-create.component.html',
-  styleUrls: ['./invitation-create.component.css']
+  templateUrl: '../invitation-form/invitation-form.component.html'
 })
 export class InvitationCreateComponent implements OnInit {
 
