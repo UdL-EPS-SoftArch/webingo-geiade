@@ -5,7 +5,7 @@ export class Game extends Resource {
   id: number;
   uri: string;
   name = '';
-  isFinished: boolean;
+  finished: boolean;
   numberofplayers: number;
   nums: number[];
   linePrize: number;
