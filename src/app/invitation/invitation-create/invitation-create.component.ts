@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {InvitationService} from "../invitation.service";
-import { Invitation} from "../invitation";
+import {Invitation} from "../invitation";
 
 @Component({
   selector: 'app-invitation-create',
@@ -22,7 +22,7 @@ export class InvitationCreateComponent implements OnInit {
 
   onSubmit(): void {
     this.invitationService.create(this.invitation).subscribe(
-      (invitation: Invitation) => this.router.navigate([invitation.id]));
+      (invitation: Invitation) => this.router.navigate([invitation.uri]));
 
   }
 }
