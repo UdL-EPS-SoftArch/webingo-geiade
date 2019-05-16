@@ -6,7 +6,7 @@ import { Invitation} from "../invitation";
 
 @Component({
   selector: 'app-invitation-delete',
-  templateUrl: './game-invitation.component.html'
+  templateUrl: './invitation-delete.component.html'
 })
 export class InvitationDeleteComponent implements OnInit {
   public invitation: Invitation = new Invitation();
