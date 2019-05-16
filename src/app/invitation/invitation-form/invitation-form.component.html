@@ -9,8 +9,15 @@
       <div class="invalid-feedback">A player is required</div>
     </div>
 
+  <div class="form-group" [class.was-validated]="uri.dirty || uri.touched">
+      <label class="control-label" for="uri">Uri*</label>
+      <input id="uri" name="player" type="text" class="form-control" required
+             [(ngModel)]="invitation.uri" #uri="ngModel">
+      <div class="invalid-feedback">A uri is required</div>
+    </div>
+
     <div class="form-group" [class.was-validated]="message.dirty || message.touched">
-      <label class="control-label" for="player">Message*</label>
+      <label class="control-label" for="message">Message*</label>
       <input id="message" name="message" type="text" class="form-control" required
              [(ngModel)]="invitation.message" #message="ngModel">
       <div class="invalid-feedback">A message is required</div>
