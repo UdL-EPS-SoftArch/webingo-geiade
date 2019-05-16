@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Player who invited</h6>
-        <p class="card-text">{{invitation.playerWhoInvited}}</p>
+        <p class="num">{{invitation.playerWhoInvited}}</p>
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Message</h6>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="card-footer text-right">
-      <button id="listBtn" type="button" [routerLink]="['/invitation']"
+      <button id="listBtn" type="button" [routerLink]="['/invitations']"
               class="btn m-1 btn-outline-primary">Back
       </button>
       <button id="editBtn" type="button" [routerLink]="['edit']"
