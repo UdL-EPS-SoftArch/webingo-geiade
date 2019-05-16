@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GameService } from '../game.service';
 import { Game } from '../game';
+import {Player} from "../../user/player";
 
 @Component({
   selector: 'app-game-detail',
@@ -18,7 +19,15 @@ export class GameDetailComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.gameService.get(id).subscribe(
-      game => this.game = game);
+      game => {
+        this.game = game;
+        this.game.getRelation(Player,"bingoWinner").subscribe(
+          bingoWinner => this.game.bingoWinner = bingoWinner
+        );
+        this.game.getRelation(Player,"lineWinner").subscribe(
+          lineWinner => this.game.lineWinner = lineWinner
+        );
+      });
   }
 
   public delete() {
