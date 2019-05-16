@@ -1,5 +1,6 @@
 import { Resource } from 'angular4-hal-aot';
-import {Player} from "../user/player";
+import {Player} from '../user/player';
+import {Card} from '../card/card';
 
 export class Game extends Resource {
   id: number;

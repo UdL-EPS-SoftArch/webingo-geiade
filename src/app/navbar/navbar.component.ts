@@ -18,6 +18,5 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.isCollapsed = true;
     this.user = this.authenticationService.getCurrentUser().authorities[0].authority;
-    // this.user = this.authenticationService.getCurrentUser().authorization;
   }
 }
