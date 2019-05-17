@@ -6,7 +6,7 @@ export class Game extends Resource {
   id: number;
   uri: string;
   name = '';
-  isFinished: boolean;
+  finished: boolean;
   numberofplayers: number;
   nums: number[];
   linePrize: number;
@@ -19,5 +19,7 @@ export class Game extends Resource {
   constructor(values: object = {}) {
     super();
     Object.assign(this as any, values);
+    console.log('------> game creat');
+    console.log(Object.assign(this as any, values));
   }
 }

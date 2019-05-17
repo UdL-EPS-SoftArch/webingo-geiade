@@ -1,28 +1,38 @@
-<div class="card mb-4">
+<li class="card mb-4">
   <div class="card-block">
     <h4 class="card-title col-md-12 p-3">{{game.name}}</h4>
-    <div class="card-body row m-1">
+    <li class="card-body row m-1">
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Is it finished?</h6>
-        <p class="card-text">{{game.isFinished}}</p>
+        <p class="card-text">{{game.finished}}</p>
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Nº players</h6>
         <p class="card-text">{{game.numberofplayers}}</p>
       </div>
-      <div class="col-md-4 p-3">
+      <div *ngIf="game.lineWinner!=null" class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Line Winner</h6>
         <p class="card-text">{{game.lineWinner.username}}</p>
       </div>
-      <div class="col-md-4 p-3">
+    <div *ngIf="game.lineWinner==null" class="col-md-4 p-3">
+     <h6 class="card-subtitle text-muted">Line Winner</h6>
+      <p class="card-text">Nobody yet</p>
+   </div>
+    <div *ngIf="game.bingoWinner==null" class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">Bingo Winner</h6>
+      <p class="card-text">Nobody yet</p>
+    </div>
+      <div *ngIf="game.bingoWinner!=null" class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Bingo Winner</h6>
         <p class="card-text">{{game.bingoWinner.username}}</p>
       </div>
+
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Prize</h6>
         <p class="card-text">{{game.bingoPrize}}</p>
       </div>
-    </div>
+
+    </li>
     <div class="card-footer text-right">
       <button id="listBtn" type="button" [routerLink]="['/games']"
               class="btn m-1 btn-outline-primary">Back
@@ -34,5 +44,5 @@
               class="btn m-1 btn-outline-danger">Delete
       </button>
     </div>
-  </div>
-</div>
+
+

@@ -9,6 +9,13 @@
       <div class="invalid-feedback">A name is required</div>
     </div>
 
+    <div class="form-group" [class.was-validated]="bingoPrize.dirty || bingoPrize.touched">
+      <label class="control-label" for="bingoPrize">Game's prize*</label>
+      <input id="bingoPrize" name="bingoPrize" type="text" class="form-control" required
+             [(ngModel)]="game.bingoPrize" #bingoPrize="ngModel">
+      <div class="invalid-feedback">A prize is required</div>
+    </div>
+
     <!-- Button -->
     <div class="form-group">
       <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
