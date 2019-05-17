@@ -5,7 +5,7 @@ export class Invitation extends Resource {
   id: number;
   id_game: number;
   isUnderway: boolean;
-  isAccepted: boolean;
+  accepted: boolean;
   timeout: boolean;
   message: string;
   playerInvited: Player;
