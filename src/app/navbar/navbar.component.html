@@ -10,7 +10,7 @@
       <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
-      <li *ngIf="user == 'ROLE_ADMIN'" class="nav-item" ngbDropdown>
+      <li *ngIf="user == 'ROLE_PLAYER'" class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Play</a>
         <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
@@ -35,7 +35,7 @@
       </li>
       <li *ngIf="user == 'ROLE_PLAYER'" class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Users </a>
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>My Things </a>
         <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/cards']"><span class="fa fa-id-card"></span> Cards</a>
