@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 
 @Injectable()
 export class GameService extends RestService<Game> {
-  private card: Card;
+  public card: Card;
 
   constructor(injector: Injector,
               private cardService: CardService,
@@ -22,7 +22,7 @@ export class GameService extends RestService<Game> {
     return this.search('findByNameContaining', options);
   }
 
-  public joinGame(game: Game) {
+  public joinGame(game: Game): void {
     this.card = new Card();
     this.card.game = game;
 

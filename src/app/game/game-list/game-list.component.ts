@@ -17,7 +17,7 @@ export class GameListComponent implements OnInit {
 
   constructor(
     public router: Router,
-    private gameService: GameService,
+    public gameService: GameService,
     private authenticationService: AuthenticationBasicService
   ) {}
 

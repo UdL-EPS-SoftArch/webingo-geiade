@@ -18,7 +18,7 @@
              [routerLink]="['/players']"><span class="fa fa-user"></span> Players</a>
         </div>
       </li>
-      <li class="nav-item" ngbDropdown>
+      <li *ngIf="user == 'ROLE_ADMIN'" class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="adminDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Administration</a>
         <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
