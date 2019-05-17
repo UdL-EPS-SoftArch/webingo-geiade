@@ -2,7 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InvitationService } from '../invitation.service';
 import { Invitation } from '../invitation';
+<<<<<<< HEAD
 import { Player } from '../../user/player';
+=======
+import {Player} from '../../user/player';
+>>>>>>> 0172fa223410fb39c6459fc448acc32626f56355
 
 @Component({
   selector: 'app-invitation-detail',

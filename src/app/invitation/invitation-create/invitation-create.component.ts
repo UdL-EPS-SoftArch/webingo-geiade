@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {InvitationService} from "../invitation.service";
-import {Invitation} from "../invitation";
+import {InvitationService} from '../invitation.service';
+import {Invitation} from '../invitation';
 
 @Component({
   selector: 'app-invitation-create',
