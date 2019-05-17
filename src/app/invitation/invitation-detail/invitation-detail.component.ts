@@ -21,9 +21,9 @@ export class InvitationDetailComponent implements OnInit {
     this.invitationService.get(id).subscribe(
       invitation => {
         this.invitation = invitation;
-        // this.invitation.getRelation(Player, 'playerInvited').subscribe(
-        //   playerInvited => this.invitation.playerInvited = playerInvited
-        // );
+        this.invitation.getRelation(Player, 'playerInvited').subscribe(
+          playerInvited => this.invitation.playerInvited = playerInvited
+        );
         this.invitation.getRelation(Player, 'playerWhoInvited').subscribe(
           playerWhoInvited => this.invitation.playerWhoInvited = playerWhoInvited
         );
