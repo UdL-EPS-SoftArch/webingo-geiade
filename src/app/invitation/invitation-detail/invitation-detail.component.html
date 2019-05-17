@@ -1,14 +1,14 @@
 <div class="card mb-4">
   <div class="card-block">
-    <h4 class="card-title col-md-12 p-3">{{invitation.id_game}}</h4>
+    <h4 class="card-title col-md-12 p-3">{{invitation.id}}</h4>
     <div class="card-body row m-1">
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Player invited</h6>
-        <p class="card-text">{{invitation.playerInvited}}</p>
+        <p class="card-text">{{invitation.playerInvited.username}}</p>
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Player who invited</h6>
-        <p class="num">{{invitation.playerWhoInvited}}</p>
+        <p class="card-text">{{invitation.playerWhoInvited.username}}</p>
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Message</h6>
@@ -16,7 +16,7 @@
       </div>
       <div class="col-md-4 p-3">
         <h6 class="card-subtitle text-muted">Is accepted</h6>
-        <p class="card-text">{{invitation.isAccepted}}</p>
+        <p class="card-text">{{invitation.accepted}}</p>
       </div>
     </div>
     <div class="card-footer text-right">
