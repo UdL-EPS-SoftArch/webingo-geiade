@@ -41,7 +41,8 @@ import {GameEditComponent} from './game/game-edit/game-edit.component';
 import { CardListComponent } from './card/card-list/card-list.component';
 import { CardCreateComponent } from './card/card-create/card-create.component';
 import { CardDetailComponent} from './card/card-detail/card-detail.component';
-import {CardSearchComponent} from './card/card-search/card-search.component';
+import { CardSearchComponent } from './card/card-search/card-search.component';
+import { CardDeleteComponent } from './card/card-delete/card-delete.component';
 import {GameJoinComponent} from './game/game-join/game-join.component';
 import {GameDetailComponent} from './game/game-detail/game-detail.component';
 import {GameDeleteComponent} from './game/game-delete/game-detele.component';
@@ -70,6 +71,7 @@ import {GameDeleteComponent} from './game/game-delete/game-detele.component';
     CardCreateComponent,
     CardDetailComponent,
     CardSearchComponent,
+    CardDeleteComponent,
     GameJoinComponent,
     GameDetailComponent,
     GameDeleteComponent,
@@ -90,7 +92,6 @@ import {GameDeleteComponent} from './game/game-delete/game-detele.component';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    // { provide: ''},
     AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService, CardService
   ],
   bootstrap: [AppComponent]

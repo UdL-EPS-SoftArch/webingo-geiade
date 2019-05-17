@@ -1,11 +1,7 @@
 <div class="row justify-content-between">
-  <div class="col mb-3">
-    <app-card-search (emitResults)="showSearchResults($event)" [cards]="cards"></app-card-search>
-  </div>
-  <div class="col mb-3">
-    <button id="newUserBtn" class="btn btn-success pull-right" type="button"
-            [routerLink]="['/cards/new']">Create Card</button>
-  </div>
+  <!--<div class="col mb-3">-->
+    <!--<app-card-search (emitResults)="showSearchResults($event)" [cards]="cards"></app-card-search>-->
+  <!--</div>-->
 </div>
 
 <div class="card mb-1" *ngFor="let card of cards">
