@@ -13,6 +13,10 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { PlayerCreateComponent } from './user/user-create/player-create.component';
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
+import { InvitationListComponent } from './invitation/invitation-list/invitation-list.component';
+import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
+import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
+import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
 import {GameListComponent} from './game/game-list/game-list.component';
 import {GameCreateComponent} from './game/game-create/game-create.component';
 import {CardListComponent} from './card/card-list/card-list.component';
@@ -34,6 +38,10 @@ const routes: Routes = [
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
+  { path: 'invitations', component: InvitationListComponent, canActivate: [LoggedInGuard] },
+  { path: 'invitations/new', component: InvitationCreateComponent, canActivate: [LoggedInGuard] },
+  { path: 'invitations/:id/delete', component: InvitationDeleteComponent, canActivate: [LoggedInGuard] },
+  { path: 'invitations/:id', component: InvitationDetailComponent, canActivate: [LoggedInGuard] },
   { path: 'games', component: GameListComponent },
   { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
   { path: 'games/:id', component: GameDetailComponent, canActivate: [AdministratorGuard] },

@@ -33,6 +33,11 @@ import { AdminCreateComponent } from './user/user-create/admin-create.component'
 import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
+import { InvitationListComponent } from './invitation/invitation-list/invitation-list.component';
+import { InvitationCreateComponent } from './invitation/invitation-create/invitation-create.component';
+import { InvitationDeleteComponent } from './invitation/invitation-delete/invitation-delete.component';
+import { InvitationDetailComponent } from './invitation/invitation-detail/invitation-detail.component';
+import {InvitationService} from "./invitation/invitation.service";
 import {GameListComponent} from './game/game-list/game-list.component';
 import {GameSearchComponent} from './game/game-search/game-search.component';
 import {GameCreateComponent} from './game/game-create/game-create.component';
@@ -63,6 +68,10 @@ import {GameDeleteComponent} from './game/game-delete/game-detele.component';
     PlayerEditComponent,
     AdminEditComponent,
     UserSearchComponent,
+    InvitationListComponent,
+    InvitationCreateComponent,
+    InvitationDeleteComponent,
+    InvitationDetailComponent,
     GameListComponent,
     GameSearchComponent,
     GameCreateComponent,
@@ -92,7 +101,7 @@ import {GameDeleteComponent} from './game/game-delete/game-detele.component';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
-    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService, CardService
+    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService, CardService, InvitationService
   ],
   bootstrap: [AppComponent]
 })

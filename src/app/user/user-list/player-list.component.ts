@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { PlayerService } from '../player.service';
 import { Player } from '../player';
 import { Sort } from 'angular4-hal-aot';
+import {InvitationService} from '../../invitation/invitation.service';
 
 @Component({
   selector: 'app-player-list',
