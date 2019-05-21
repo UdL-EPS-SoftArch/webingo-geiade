@@ -10,7 +10,7 @@
       <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
-      <li class="nav-item" ngbDropdown>
+      <li *ngIf="user == 'ROLE_PLAYER'" class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="playDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Play</a>
         <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
@@ -18,14 +18,30 @@
              [routerLink]="['/players']"><span class="fa fa-user"></span> Players</a>
         </div>
       </li>
-      <li class="nav-item" ngbDropdown>
+      <li *ngIf="user == 'ROLE_ADMIN'" class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="adminDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Administration</a>
         <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
           <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
              [routerLink]="['/users']"><span class="fa fa-user"></span> Users</a>
           <div class="dropdown-divider"></div>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+              [routerLink]="['/games']"><span class="fa fa-gamepad"></span> Games</a>
+            <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/cards']"><span class="fa fa-id-card"></span> Cards</a>
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Administer other entities...</a>
+        </div>
+      </li>
+      <li *ngIf="user == 'ROLE_PLAYER'" class="nav-item" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="userDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>My Things </a>
+        <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/cards']"><span class="fa fa-id-card"></span> Cards</a>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/games']"><span class="fa fa-gamepad"></span> Games</a>
+
         </div>
       </li>
     </ul>

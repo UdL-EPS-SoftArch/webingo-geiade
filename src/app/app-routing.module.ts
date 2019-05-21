@@ -13,6 +13,15 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { PlayerCreateComponent } from './user/user-create/player-create.component';
 import { AdminCreateComponent } from './user/user-create/admin-create.component';
+import {GameListComponent} from './game/game-list/game-list.component';
+import {GameCreateComponent} from './game/game-create/game-create.component';
+import {CardListComponent} from './card/card-list/card-list.component';
+import {CardCreateComponent} from './card/card-create/card-create.component';
+import {CardDetailComponent} from './card/card-detail/card-detail.component';
+import {GameDetailComponent} from './game/game-detail/game-detail.component';
+import {GameEditComponent} from './game/game-edit/game-edit.component';
+import {GameDeleteComponent} from './game/game-delete/game-detele.component';
+import {CardDeleteComponent} from './card/card-delete/card-delete.component';
 
 const routes: Routes = [
   { path: 'players/new', component: PlayerCreateComponent, canActivate: [AdministratorGuard] },
@@ -25,9 +34,19 @@ const routes: Routes = [
   { path: 'admins/:id', component: AdminDetailComponent, canActivate: [AdministratorGuard] },
   { path: 'players', component: PlayerListComponent, canActivate: [LoggedInGuard] },
   { path: 'users', component: UserListComponent, canActivate: [AdministratorGuard] },
+  { path: 'games', component: GameListComponent },
+  { path: 'games/new', component: GameCreateComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id', component: GameDetailComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id/edit', component: GameEditComponent, canActivate: [AdministratorGuard] },
+  { path: 'games/:id/delete', component: GameDeleteComponent, canActivate: [AdministratorGuard] },
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
+  { path: 'cards', component: CardListComponent },
+  { path: 'cards/new', component: CardCreateComponent, canActivate: [AdministratorGuard] },
+  { path: 'cards/:id', component: CardDetailComponent, canActivate: [LoggedInGuard] },
+  { path: 'cards/:id/delete', component: CardDeleteComponent, canActivate: [LoggedInGuard] },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
